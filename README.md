@@ -76,7 +76,7 @@ and you should place the queries in 'dss/queries' dir.
     do
         DSS_QUERY=dss/templates ./qgen $q >> dss/queries/$q.sql
         sed 's/^select/explain select/' dss/queries/$q.sql > dss/queries/$q.explain.sql
-        cat dss/queries/$i.sql >> dss/queries/$i.explain.sql;
+        cat dss/queries/$q.sql >> dss/queries/$q.explain.sql;
     done
 
 Now you should have 44 files in the dss/queries directory. 22 of them will
